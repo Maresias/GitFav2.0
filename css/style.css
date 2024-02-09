@@ -1,9 +1,29 @@
 *{
-    
+   margin: 0; 
+   padding: 0;
+
+   box-sizing: border-box;
+
+   
 }
 
 body{
 
-    background-color: #000000e0;
     
+}
+
+header{
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #wrapper-input{
+    width: 100%;
+}
+
+header #input-seach{
+    background-color: #06181C;
+
 }
