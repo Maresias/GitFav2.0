@@ -45,7 +45,6 @@ header{
  #wrapper-input{
     display: flex;
     gap: 1rem;
-    
 }
 
 #input-seach{
@@ -53,7 +52,7 @@ header{
     padding: 1.2rem;
     border-radius: .4rem;
     border: none;
-    width: 100%;
+    min-width: 300px;
 }
 
 #wrapper-input button{
