@@ -84,8 +84,19 @@ table{
 thead tr{
     text-align: left;
 }
+
+thead th:first-child{
+    border-radius: .6rem 0 0 0;
+}
+
+thead th:last-child{
+    border-radius: 0 .6rem 0 0 ;
+}
+
 thead th{
     background-color: #092D38;
-    padding: 1.6rem;
+    padding: 1.6rem 2rem 1.6rem 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
 }
 
