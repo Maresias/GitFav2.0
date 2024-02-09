@@ -24,7 +24,7 @@
 }
 
 #app{
-    max-width: 620px;
+    max-width: 720px;
     margin: 0 auto;
 }
 
@@ -40,16 +40,36 @@ header{
     align-items: center;
 }
 
-header #wrapper-input{
+ #wrapper-input{
     display: flex;
     gap: 1rem;
-   
+    
 }
 
-header #input-seach{
+#input-seach{
     background-color: #06181C;
     padding: 1.2rem;
     border-radius: .4rem;
     border: none;
     width: 100%;
+}
+
+#wrapper-input button{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: #065E7C;
+    border: none;
+    border-radius: .6rem;
+    padding: .4rem 2rem;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#wrapper-input button img{
+    width: 1.5rem;
 }
