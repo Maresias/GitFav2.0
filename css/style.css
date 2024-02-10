@@ -79,10 +79,21 @@ header{
 }
 
 table{
+    display: inline-block;
     border-collapse: collapse;
+    border: 1px solid green;
+
+
+    border-radius: .7rem;
+
+}
+
+table tr{
+    border-radius: 46rem;
 }
 thead tr{
     text-align: left;
+ 
 }
 
 thead th:first-child{
@@ -98,5 +109,53 @@ thead th{
     padding: 1.6rem 2rem 1.6rem 2rem;
     font-weight: 400;
     text-transform: capitalize;
+    
+}
+
+td.user img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+td.user{
+    display: flex;
+    gap: 2.4rem;
+    width: 400px;
+}
+
+td.user a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+td.user p{
+    font-weight: 800;
+    color: red;
+    font-size: 1.8rem;
+}
+tbody tr:nth-child(odd){
+    background-color: #06161B;
+}
+
+tbody tr:nth-child(even){
+    border: 0.01rem solid green;
+
+}
+
+tbody td{
+    padding: 1.6rem 2rem 1.6rem 2rem;
+    
+}
+
+tbody button{
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-weight: 600;
 }
 
