@@ -82,15 +82,11 @@ table{
     display: inline-block;
     border-collapse: collapse;
     border: 1px solid green;
-
-
     border-radius: .7rem;
+    padding: .12rem;
 
 }
 
-table tr{
-    border-radius: 46rem;
-}
 thead tr{
     text-align: left;
  
@@ -137,6 +133,7 @@ td.user p{
     color: red;
     font-size: 1.8rem;
 }
+
 tbody tr:nth-child(odd){
     background-color: #06161B;
 }
@@ -144,6 +141,10 @@ tbody tr:nth-child(odd){
 tbody tr:nth-child(even){
     border: 0.01rem solid green;
 
+}
+
+tbody tr:last-child{
+    border: none;
 }
 
 tbody td{
