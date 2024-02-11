@@ -72,13 +72,20 @@ header{
     font-weight: bold;
     color: #fff;
     font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+#wrapper-input button:hover{
+    transition: .7s;
+    background-color: #169bc7;
 }
 
 #wrapper-input button img{
     width: 1.5rem;
 }
 
-.on-favorites{
+.off-favorites{
     background-image: url(/assets/Estrela.svg);
     background-repeat: no-repeat;
     background-position: 25% 50%;
