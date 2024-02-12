@@ -12,7 +12,6 @@ export class Favorites{
 export class FavoritesView extends Favorites{
     constructor(RecebendoEstruturaPorAqui){
         super(RecebendoEstruturaPorAqui)
-        this.createRow()
 
     }
 
