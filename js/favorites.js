@@ -12,7 +12,8 @@ export class Favorites{
 export class FavoritesView extends Favorites{
     constructor(RecebendoEstruturaPorAqui){
         super(RecebendoEstruturaPorAqui)
-        console.log(this.estrutura)
+        this.createRow()
+
     }
 
     removeoffFavorites(){
@@ -37,6 +38,9 @@ export class FavoritesView extends Favorites{
         <td class="repositories">37</td>
         <td class="followes">137</td>
         <td><button id="remover">Remover</button></td>`
+
+        tr.innerHTML = content
+        console.log(tr)
     }
 
 }
