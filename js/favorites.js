@@ -39,7 +39,6 @@ export class FavoritesView extends Favorites{
         <td><button id="remover">Remover</button></td>`
 
         tr.innerHTML = content
-        console.log(tr)
     }
 
 }
