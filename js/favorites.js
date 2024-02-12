@@ -1,4 +1,9 @@
 //CLASSE QUE VAI CONTER A LOGICA DE DADOS
+export class githubUser{
+    static search(nomePesquisado){
+        const recebendoDadosApi = `https:/api.github.com/users/${nomePesquisado}`
+    }
+}
 
 //COMO OS DADOS SERÃO ESTRUTURADOS
 
@@ -28,17 +33,19 @@ export class FavoritesView extends Favorites{
         
         const content = 
         `<td class="user">
-            <img src="https://github.com/alexandrercs.png" alt="">
-            <a href="https://github.com/alexandrercs" target="_blank" rel="noopener noreferrer">
-                <p>Alexandre</p>
-                <span>alexandrercs</span>
+            <img src="" alt="">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <p></p>
+                <span></span>
             </a>
         </td>
-        <td class="repositories">37</td>
-        <td class="followes">137</td>
+        <td class="repositories"></td>
+        <td class="followes"></td>
         <td><button id="remover">Remover</button></td>`
 
         tr.innerHTML = content
+
+        return tr
     }
 
 }
