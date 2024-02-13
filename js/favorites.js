@@ -25,7 +25,12 @@ export class Favorites{
     }
 
     async add(username){
+        
+        const usuarioFavorito = await githubUser.search(username)
 
+        this.dados = [usuarioFavorito, ...this.dados]
+
+        this.update()
     }
 }
 
@@ -53,7 +58,9 @@ export class FavoritesView extends Favorites{
     }
 
     update(){
-        
+        this.dados.forEach(usuario => {
+            
+        });
     }
 
     removeoffFavorites(){
