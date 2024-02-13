@@ -2,6 +2,17 @@
 export class githubUser{
     static search(nomePesquisado){
         const recebendoDadosApi = `https:/api.github.com/users/${nomePesquisado}`
+
+        return fetch(recebendoDadosApi)
+        .then(dadosDaApi => dadosDaApi.json())
+        .then(
+            ({login, name,  public_repos, followers}) => ({
+                login,
+                name,
+                public_repos,
+                followers
+            })
+        )
     }
 }
 
@@ -18,6 +29,18 @@ export class FavoritesView extends Favorites{
     constructor(RecebendoEstruturaPorAqui){
         super(RecebendoEstruturaPorAqui)
 
+        this.buttonAdd()
+
+
+    }
+
+    buttonAdd(){
+        const clickButton = this.estrutura.querySelector('#wrapper-input button')
+        clickButton.onclick = () =>{
+
+            const {value} = this.estrutura.querySelector('#wrapper-input input')
+            console.log(value)
+        }
     }
 
     removeoffFavorites(){
