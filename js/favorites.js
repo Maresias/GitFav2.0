@@ -24,9 +24,14 @@ export class Favorites{
 
     }
 
+    save(){
+        localStorage.setItem('@Nome-que-vc-quiser', JSON.stringify(this.dados))
+    }
+
     async add(username){
         
         const usuarioFavorito = await githubUser.search(username)
+        
 
         this.dados = [usuarioFavorito, ...this.dados]
 
@@ -59,8 +64,19 @@ export class FavoritesView extends Favorites{
 
     update(){
         this.dados.forEach(usuario => {
-            
+            const adicionadoDadosNaTr = this.criandoTr()
+            adicionadoDadosNaTr.querySelector('.user img').src = `https://github.com/${usuario.login}.png`
+            adicionadoDadosNaTr.querySelector('.user a').href = `https://github.com/${usuario.login}`
+            adicionadoDadosNaTr.querySelector('.user p').textContent = usuario.name
+            adicionadoDadosNaTr.querySelector('.user span').textContent = usuario.login
+            adicionadoDadosNaTr.querySelector('.repositories').textContent = usuario.public_repos
+            adicionadoDadosNaTr.querySelector('.followes').textContent = usuario.followers
+
+
+            this.manipulandoTbody.append(adicionadoDadosNaTr)
         });
+
+        console.log(this.manipulandoTbody)
     }
 
     removeoffFavorites(){
@@ -71,7 +87,7 @@ export class FavoritesView extends Favorites{
         estrela.classList.remove('off-favorites')
     }
 
-    createRow(){
+    criandoTr(){
         const tr = document.createElement('tr')
         
         const content = 
