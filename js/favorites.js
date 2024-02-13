@@ -23,7 +23,14 @@ export class Favorites{
         this.estrutura =  document.querySelector(RecebendoEstruturaDoFavoritesView)
 
     }
+
+    async add(username){
+
+    }
 }
+
+
+
 
 export class FavoritesView extends Favorites{
     constructor(RecebendoEstruturaPorAqui){
@@ -39,7 +46,7 @@ export class FavoritesView extends Favorites{
         clickButton.onclick = () =>{
 
             const {value} = this.estrutura.querySelector('#wrapper-input input')
-            console.log(value)
+            this.add(value)
         }
     }
 
