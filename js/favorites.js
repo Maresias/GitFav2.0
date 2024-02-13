@@ -36,6 +36,8 @@ export class FavoritesView extends Favorites{
     constructor(RecebendoEstruturaPorAqui){
         super(RecebendoEstruturaPorAqui)
 
+        this.manipulandoTbody = this.estrutura.querySelector('table tbody')
+
         this.buttonAdd()
 
 
@@ -48,6 +50,10 @@ export class FavoritesView extends Favorites{
             const {value} = this.estrutura.querySelector('#wrapper-input input')
             this.add(value)
         }
+    }
+
+    update(){
+        
     }
 
     removeoffFavorites(){
