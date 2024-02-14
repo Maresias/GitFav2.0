@@ -24,6 +24,11 @@ export class Favorites{
 
     }
 
+    inicioDoDados(){
+        
+        this.dados = JSON.parse(localStorage.getItem('@Nome-que-voce-quiser:')) || []
+    }
+
     save(){
         localStorage.setItem('@Nome-que-vc-quiser', JSON.stringify(this.dados))
     }
@@ -37,6 +42,7 @@ export class Favorites{
 
         this.update()
     }
+
 }
 
 
