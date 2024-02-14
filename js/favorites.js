@@ -58,6 +58,7 @@ export class FavoritesView extends Favorites{
 
 
         this.buttonAdd()
+        this.verificandoSeTemTr()
         
 
 
@@ -120,7 +121,6 @@ export class FavoritesView extends Favorites{
     }
 
     removeAllTr(){
-        console.log(this.manipulandoTbody)
         this.manipulandoTbody.querySelectorAll('tr')
         .forEach((tr) => {
             tr.remove()
@@ -130,7 +130,9 @@ export class FavoritesView extends Favorites{
     }
 
     verificandoSeTemTr(){
-        
+        this.manipulandoTbody.querySelectorAll('tr').forEach((conteudo) =>{
+            console.log(conteudo)
+        })
     }
 
 }
