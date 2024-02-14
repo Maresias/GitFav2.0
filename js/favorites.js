@@ -54,6 +54,8 @@ export class FavoritesView extends Favorites{
 
         this.manipulandoTbody = this.estrutura.querySelector('table tbody')
 
+        this.removeAllTr()
+
         this.buttonAdd()
 
 
@@ -111,6 +113,16 @@ export class FavoritesView extends Favorites{
         tr.innerHTML = content
 
         return tr
+    }
+
+    removeAllTr(){
+        console.log(this.manipulandoTbody)
+        this.manipulandoTbody.querySelectorAll('tr')
+        .forEach((tr) => {
+            tr.remove()
+        }
+
+        )
     }
 
 }
