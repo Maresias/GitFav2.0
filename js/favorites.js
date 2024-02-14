@@ -74,7 +74,6 @@ export class FavoritesView extends Favorites{
 
     update(){
         this.removeAllTr()
-        this.removeoffFavorites()
 
         this.dados.forEach(usuario => {
             const adicionadoDadosNaTr = this.criandoTr()
@@ -128,6 +127,10 @@ export class FavoritesView extends Favorites{
         }
 
         )
+    }
+
+    verificandoSeTemTr(){
+        
     }
 
 }
