@@ -22,6 +22,8 @@ export class Favorites{
     constructor(RecebendoEstruturaDoFavoritesView){
         this.estrutura =  document.querySelector(RecebendoEstruturaDoFavoritesView)
 
+        this.inicioDoDados()
+
     }
 
     inicioDoDados(){
@@ -54,7 +56,6 @@ export class FavoritesView extends Favorites{
 
         this.manipulandoTbody = this.estrutura.querySelector('table tbody')
 
-        this.removeAllTr()
 
         this.buttonAdd()
 
@@ -71,6 +72,8 @@ export class FavoritesView extends Favorites{
     }
 
     update(){
+        this.removeAllTr()
+
         this.dados.forEach(usuario => {
             const adicionadoDadosNaTr = this.criandoTr()
             adicionadoDadosNaTr.querySelector('.user img').src = `https://github.com/${usuario.login}.png`
