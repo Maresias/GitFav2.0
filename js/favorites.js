@@ -74,6 +74,7 @@ export class FavoritesView extends Favorites{
     }
 
     update(){
+        this.removeoffFavorites()
         this.removeAllTr()
 
         this.dados.forEach(usuario => {
@@ -131,7 +132,7 @@ export class FavoritesView extends Favorites{
 
     verificandoSeTemTr(){
         this.manipulandoTbody.querySelectorAll('tr').forEach((conteudo) =>{
-            console.log(conteudo)
+            
         })
     }
 
