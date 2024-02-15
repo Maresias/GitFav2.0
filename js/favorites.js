@@ -56,10 +56,7 @@ export class FavoritesView extends Favorites{
 
         this.manipulandoTbody = this.estrutura.querySelector('table tbody')
 
-
         this.buttonAdd()
-        this.verificandoSeTemTr()
-        
 
 
     }
@@ -90,7 +87,6 @@ export class FavoritesView extends Favorites{
             this.manipulandoTbody.append(adicionadoDadosNaTr)
         });
 
-        console.log(this.manipulandoTbody)
     }
 
     removeoffFavorites(){
@@ -131,12 +127,11 @@ export class FavoritesView extends Favorites{
     }
 
     verificandoSeTemTr(){
-        this.manipulandoTbody.querySelectorAll('tr').forEach((conteudo) =>{
-            
-        })
-    }
+       const v = this.estrutura.querySelector('table tbody')
+       console.log(v.value == undefined)
 
+    }
 }
 
-
-//CLASSE QUE VAI CRIAR A VISUALIZAÇÃO E EVENTO HTML
+//
+//CLASSE QUE VAI CRIAR A VISUALIZAÇÃO E EVENTO HTML//
