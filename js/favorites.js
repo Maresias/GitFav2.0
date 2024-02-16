@@ -45,6 +45,15 @@ export class Favorites{
         this.update()
     }
 
+    deleteTr(user){
+        const novaListaTr = this.dados.filter(
+            atualListaTr => atualListaTr.login !== user.login
+        )
+
+        this.dados = novaListaTr
+        this.update()
+    }
+
 }
 
 
