@@ -66,6 +66,8 @@ export class Favorites{
 
         this.dados = novaListaTr
         this.update()
+        this.save()
+        Swal.fire("Favorito removido")
     }
 
 }
