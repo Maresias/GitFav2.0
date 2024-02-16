@@ -186,5 +186,6 @@ tbody button{
 
 
 .swal2-container.swal2-center>.swal2-popup{
-    background-color: #000000;
+    background-color: #065E7C;
+    color: #ffffff;
 }
