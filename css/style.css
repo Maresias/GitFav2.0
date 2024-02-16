@@ -172,6 +172,11 @@ tbody tr:last-child{
     border: none;
 }
 
+tbody tr:hover{
+    transition: .7s;
+    box-shadow: rgba(8, 187, 109, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
 tbody td{
     padding: 1.6rem 2rem 1.6rem 2rem;
     
