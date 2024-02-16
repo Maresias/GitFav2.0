@@ -23,6 +23,7 @@
     border: 0;
 }
 
+
 #app{
     max-width: 720px;
     margin: 0 auto;
@@ -170,8 +171,6 @@ tbody tr:last-child{
     border: none;
 }
 
-tbody tr:hover {
-}
 tbody td{
     padding: 1.6rem 2rem 1.6rem 2rem;
     
@@ -185,3 +184,7 @@ tbody button{
     font-weight: 600;
 }
 
+
+.swal2-container.swal2-center>.swal2-popup{
+    background-color: #000000;
+}

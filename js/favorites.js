@@ -51,7 +51,7 @@ export class Favorites{
     
             this.update()
         }catch{
-            alert(Error.menssage)
+            Swal.fire('dsdsdsdsdsds');
         }
         
   
