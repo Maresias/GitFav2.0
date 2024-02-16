@@ -57,8 +57,6 @@ export class Favorites{
         }catch(error){
             Swal.fire(error.message);
         }
-        
-  
     }
 
     deleteTr(user){
@@ -71,8 +69,6 @@ export class Favorites{
     }
 
 }
-
-
 
 
 export class FavoritesView extends Favorites{
