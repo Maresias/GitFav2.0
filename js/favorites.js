@@ -36,13 +36,25 @@ export class Favorites{
     }
 
     async add(username){
-        
-        const usuarioFavorito = await githubUser.search(username)
+        console.log(username.login)
+        try{
+            const usuarioExiste = this.dados.find(favoritosEmLista => favoritosEmLista.login === username)
+
+            if(usuarioExiste){
+                throw new Error('Usuario ja existe')
+            }
+
+            const usuarioFavorito = await githubUser.search(username)
         
 
-        this.dados = [usuarioFavorito, ...this.dados]
-
-        this.update()
+            this.dados = [usuarioFavorito, ...this.dados]
+    
+            this.update()
+        }catch{
+            alert(Error.menssage)
+        }
+        
+  
     }
 
     deleteTr(user){
