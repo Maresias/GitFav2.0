@@ -70,6 +70,7 @@ export class Favorites{
 
 }
 
+//CLASSE QUE VAI CRIAR A VISUALIZAÇÃO E EVENTO HTML//
 
 export class FavoritesView extends Favorites{
     constructor(RecebendoEstruturaPorAqui){
@@ -169,6 +170,3 @@ export class FavoritesView extends Favorites{
 
     }
 }
-
-//
-//CLASSE QUE VAI CRIAR A VISUALIZAÇÃO E EVENTO HTML//
