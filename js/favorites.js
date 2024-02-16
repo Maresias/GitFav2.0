@@ -79,6 +79,7 @@ export class FavoritesView extends Favorites{
 
             const {value} = this.estrutura.querySelector('#wrapper-input input')
             this.add(value)
+            
         }
     }
 
