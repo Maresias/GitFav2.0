@@ -78,8 +78,10 @@ export class FavoritesView extends Favorites{
         clickButton.onclick = () =>{
 
             const {value} = this.estrutura.querySelector('#wrapper-input input')
+            const limpa = this.estrutura.querySelector('#wrapper-input input')
             this.add(value)
-            
+            limpa.value = ""
+            limpa.focus()
         }
     }
 
