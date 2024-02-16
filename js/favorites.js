@@ -32,26 +32,30 @@ export class Favorites{
     }
 
     save(){
-        localStorage.setItem('@Nome-que-vc-quiser', JSON.stringify(this.dados))
+        localStorage.setItem('@Nome-que-vc-quiser:', JSON.stringify(this.dados))
     }
 
     async add(username){
-        console.log(username.login)
         try{
-            const usuarioExiste = this.dados.find(favoritosEmLista => favoritosEmLista.login === username)
+            const usuarioExiste = this.dados.find(favoritosEmLista =>  favoritosEmLista.login.toUpperCase()=== username.toUpperCase())
 
             if(usuarioExiste){
-                throw new Error('Usuario ja existe')
+                throw new Error('Usuário já existe')
             }
 
             const usuarioFavorito = await githubUser.search(username)
         
+            if(usuarioFavorito.login === undefined){
+                throw new Error('Usuário não existe')
+            }
 
             this.dados = [usuarioFavorito, ...this.dados]
     
             this.update()
-        }catch{
-            Swal.fire('dsdsdsdsdsds');
+            this.save()
+
+        }catch(error){
+            Swal.fire(error.message);
         }
         
   
