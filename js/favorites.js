@@ -141,10 +141,15 @@ export class FavoritesView extends Favorites{
     }
 
     verificandoSeTemTr(){
-       const temTr = this.estrutura.querySelector('table tbody')
+       const temTr = this.manipulandoTbody.querySelectorAll('tr')
+
        
        if(temTr.length == 0){
+            this.span.textContent = "Nenhum favorito ainda"
+            this.estrela.classList.add('off-favorites')
 
+       }else{
+        return
        }
 
     }
