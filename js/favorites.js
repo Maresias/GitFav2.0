@@ -65,6 +65,9 @@ export class FavoritesView extends Favorites{
 
         this.manipulandoTbody = this.estrutura.querySelector('table tbody')
 
+        this.span = this.estrutura.querySelector('main span')
+        this.estrela = this.estrutura.querySelector('main table')
+
         this.buttonAdd()
 
 
@@ -92,6 +95,11 @@ export class FavoritesView extends Favorites{
             adicionadoDadosNaTr.querySelector('.repositories').textContent = usuario.public_repos
             adicionadoDadosNaTr.querySelector('.followes').textContent = usuario.followers
 
+            adicionadoDadosNaTr.querySelector('#remover').onclick = () =>{
+                this.deleteTr(usuario)
+                this.verificandoSeTemTr()
+            }
+
 
             this.manipulandoTbody.append(adicionadoDadosNaTr)
         });
@@ -99,11 +107,8 @@ export class FavoritesView extends Favorites{
     }
 
     removeoffFavorites(){
-        const span = this.estrutura.querySelector('main span')
-        const estrela = this.estrutura.querySelector('main table')
-
-        span.textContent = ""
-        estrela.classList.remove('off-favorites')
+        this.span.textContent = ""
+        this.estrela.classList.remove('off-favorites')
     }
 
     criandoTr(){
@@ -136,8 +141,11 @@ export class FavoritesView extends Favorites{
     }
 
     verificandoSeTemTr(){
-       const v = this.estrutura.querySelector('table tbody')
-       console.log(v.value == undefined)
+       const temTr = this.estrutura.querySelector('table tbody')
+       
+       if(temTr.length == 0){
+
+       }
 
     }
 }
