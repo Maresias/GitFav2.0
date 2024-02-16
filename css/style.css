@@ -170,6 +170,8 @@ tbody tr:last-child{
     border: none;
 }
 
+tbody tr:hover {
+}
 tbody td{
     padding: 1.6rem 2rem 1.6rem 2rem;
     
