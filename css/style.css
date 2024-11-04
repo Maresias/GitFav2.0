@@ -31,8 +31,8 @@
 
 body{
     font-size: 1.6rem;
-    background-color: #000000;
-    color: #fff;
+    background-color: #dfd9d9;
+    color: #140202;
     font-family: "Titillium Web", sans-serif;
     
 }
@@ -52,12 +52,12 @@ header{
 }
 
 #input-seach{
-    background-color: #06181C;
+    background-color: #c7d1d3;
     padding: 1.2rem;
     border-radius: .4rem;
     border: none;
     min-width: 300px;
-    color: #fff;
+    color: #0f0202;
 }
 
 #wrapper-input button{
@@ -65,14 +65,14 @@ header{
     align-items: center;
     gap: 1rem;
 
-    background-color: #065E7C;
+    background-color: #48c8f3;
     border: none;
     border-radius: .6rem;
     padding: .4rem 2rem;
 
     text-transform: uppercase;
     font-weight: bold;
-    color: #fff;
+    color: #110101;
     font-size: 1.2rem;
 
     cursor: pointer;
@@ -93,7 +93,7 @@ header{
     background-position: 25% 50%;
     background-size: 13rem;
     height: 620px;
-    background-color: #4a808c24;
+    background-color: #29c9e924;
 }
 
 .off-favorites-text{
@@ -127,7 +127,7 @@ thead th:last-child{
 }
 
 thead th{
-    background-color: #092D38;
+    background-color: #61d0f1;
     padding: 1.6rem 4rem 1.6rem 2rem;
     font-weight: 400;
     text-transform: capitalize;
@@ -151,7 +151,7 @@ td.user{
 td.user a{
     text-decoration: none;
     font-size: 1.4rem;
-    color: #fff;
+    color: #130101;
 }
 
 td.user p{
@@ -160,7 +160,7 @@ td.user p{
 }
 
 tbody tr:nth-child(odd){
-    background-color: #06161B;
+    background-color: #168baf;
 }
 
 tbody tr:nth-child(even){
